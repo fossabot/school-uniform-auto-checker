@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM ghcr.io/astral-sh/uv:alpine
 
 COPY . /app
 
