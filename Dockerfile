@@ -4,8 +4,8 @@ COPY . /app
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN uv sync --frozen --no-cache
 
 ENV TZ=Asia/Seoul
 
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["uv", "run","python", "main.py"]
